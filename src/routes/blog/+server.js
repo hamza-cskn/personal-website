@@ -8,17 +8,17 @@ connectToDatabase();
 export async function connectToDatabase() {
     console.log("connecting to database");
     client = new Client({
-        user: process.env.DB_BLOG_USER | "postgres",
-        host: process.env.DB_BLOG_HOST | "127.0.0.1",
-        database: process.env.DB_BLOG_DATABASE | "blogs",
+        user: process.env.DB_BLOG_USER || "postgres",
+        host: process.env.DB_BLOG_HOST || "127.0.0.1",
+        database: process.env.DB_BLOG_DATABASE || "blogs",
         password: process.env.DB_BLOG_PASSWORD,
-        port: process.env.DB_BLOG_PORT | 5432
+        port: process.env.DB_BLOG_PORT || 5432
       });
     await client.connect()
         .then(() => console.log("Connected to PostgreSQL database successfully."))
         .catch(err => {
             console.log("An error occurred: " + err);
-            console.log("Credentials: " + (process.env.DB_BLOG_USER | "postgres") + " | " + (process.env.DB_BLOG_HOST | "127.0.0.1") + " | " + (process.env.DB_BLOG_DATABASE | "blogs") + " | " + (process.env.DB_BLOG_PORT | 5432))
+            console.log("Credentials: " + (process.env.DB_BLOG_USER || "postgres") + " | " + (process.env.DB_BLOG_HOST || "127.0.0.1") + " | " + (process.env.DB_BLOG_DATABASE || "blogs") + " | " + (process.env.DB_BLOG_PORT || 5432))
         });
 }
 
