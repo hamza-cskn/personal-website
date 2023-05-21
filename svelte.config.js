@@ -11,10 +11,10 @@ const config = {
   },
 
   /** preprocess: [
-   preprocess({
+    preprocess({
       postcss: true,
     }),
-   ],*/
+  ],*/
 };
 
 export default config;
