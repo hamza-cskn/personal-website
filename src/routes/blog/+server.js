@@ -8,11 +8,11 @@ connectToDatabase();
 export async function connectToDatabase() {
     console.log("connecting to database");
     client = new Client({
-        user: 'postgres',
-        host: '127.0.0.1',
-        database: '',
-        password: '',
-        port: '5432'
+        user: process.env.DB_BLOG_USER | "postgres",
+        host: process.env.DB_BLOG_HOST | "127.0.0.1",
+        database: process.env.DB_BLOG_DATABASE | "blogs",
+        password: process.env.DB_BLOG_PASSWORD,
+        port: process.env.DB_BLOG_PORT | 5432
       });
     await client.connect().then(() => console.log("Connected to PostgreSQL database successfully."));
 }
