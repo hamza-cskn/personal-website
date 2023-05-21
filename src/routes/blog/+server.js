@@ -1,4 +1,5 @@
-import {Client} from 'pg';
+import pkg from 'pg';
+const { Client } = pkg;
 
 const client = new Client({
     user: "postgres", host: "127.0.0.1", database: "blogs", password: "secret", port: "5432"
