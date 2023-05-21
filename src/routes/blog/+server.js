@@ -1,14 +1,19 @@
 import pkg from 'pg';
-const { Client } = pkg;
+const {Client} = pkg;
 
-const client = new Client({
-    user: "postgres", host: "127.0.0.1", database: "blogs", password: "secret", port: "5432"
-});
+let client;
 
 connectToDatabase();
 
 export async function connectToDatabase() {
     console.log("connecting to database");
+    client = new Client({
+        user: 'postgres',
+        host: '127.0.0.1',
+        database: '',
+        password: '',
+        port: '5432'
+      });
     await client.connect().then(() => console.log("Connected to PostgreSQL database successfully."));
 }
 
