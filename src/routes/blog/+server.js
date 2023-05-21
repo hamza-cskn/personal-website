@@ -1,0 +1,60 @@
+import {Client} from 'pg';
+
+const client = new Client({
+    user: "postgres", host: "127.0.0.1", database: "blogs", password: "secret", port: "5432"
+});
+
+connectToDatabase();
+
+export async function connectToDatabase() {
+    console.log("connecting to database");
+    await client.connect().then(() => console.log("Connected to PostgreSQL database successfully."));
+}
+
+export async function getBlog(id) {
+    const sql = "SELECT * FROM public.blogs WHERE ID='" + id + "'";
+
+    console.log("Executing: " + sql);
+    const query = await client.query(sql);
+    console.log(query);
+    return query.rows[0];
+}
+
+export async function deleteBlog(id) {
+    const sql = "DELETE FROM public.blogs WHERE ID='" + id + "'"
+    console.log("Executing: " + sql);
+    const query = await client.query(sql);
+    console.log(query);
+}
+
+export async function createBlog(blog) {
+    const sql = "INSERT INTO public.blogs VALUES ('" + fixQuotesForSQL(blog.name) + "','" + fixQuotesForSQL(blog.title) + "','" + fixQuotesForSQL(blog.description) + "', NOW())";
+    console.log("Executing: " + sql);
+    const query = await client.query(sql);
+    console.log(query);
+}
+
+export async function updateBlog(blog) {
+    const sql = getUpdateSQLString(blog);
+    console.log("Executing: " + sql);
+    const query = await client.query(sql);
+    console.log(query);
+}
+
+function getUpdateSQLString(blog) {
+    let updatePart = "";
+    if (blog.title) {
+        updatePart += "title='" + fixQuotesForSQL(blog.title) + "'"
+    }
+    if (blog.content) {
+        if (updatePart !== "")
+            updatePart += ","
+        updatePart += "content='" + fixQuotesForSQL(blog.content) + "'"
+    }
+    return "UPDATE public.blogs SET " + updatePart + " WHERE ID='" + fixQuotesForSQL(blog.id) + "'";
+}
+
+function fixQuotesForSQL(text) {
+    if (text === undefined || text === null) return text;
+    return text.replace("'", "''")
+}
