@@ -14,7 +14,12 @@ export async function connectToDatabase() {
         password: process.env.DB_BLOG_PASSWORD,
         port: process.env.DB_BLOG_PORT | 5432
       });
-    await client.connect().then(() => console.log("Connected to PostgreSQL database successfully."));
+    await client.connect()
+        .then(() => console.log("Connected to PostgreSQL database successfully."))
+        .catch(err => {
+            console.log("An error occurred: " + err);
+            console.log("Credentials: " + (process.env.DB_BLOG_USER | "postgres") + " | " + (process.env.DB_BLOG_HOST | "127.0.0.1") + " | " + (process.env.DB_BLOG_DATABASE | "blogs") + " | " + (process.env.DB_BLOG_PORT | 5432))
+        });
 }
 
 export async function getBlog(id) {
