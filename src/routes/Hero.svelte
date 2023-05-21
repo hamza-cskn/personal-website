@@ -10,7 +10,7 @@
 </div>
 
 <div class="center-text space-y-2">
-    <h5 class="text-xl text-center leading-none text-red-500" style="color: rgb(var(--foreground-pale-rgb))">Hello, &nbsp;I'm</h5>
+    <h5 class="text-xl text-center leading-none" style="color: rgb(var(--foreground-pale-rgb))">Hello, &nbsp;I'm</h5>
     <h1 class="text-5xl text-center leading-none tracking-wide">Hamza Coşkun</h1>
     <h5 class="text-xl text-center leading-none " style="color: rgb(var(--foreground-pale-rgb))">Jr. Backend
         Developer & Operator</h5>
