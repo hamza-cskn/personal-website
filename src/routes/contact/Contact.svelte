@@ -16,7 +16,7 @@
             rel="noopener noreferrer"
     >
         <h2 class="text-2xl">
-            <img class="themeSvg inline-block" src="linkedin-black.svg" width="30px"/>
+            <img class="theme-svg inline-block" src="linkedin-black.svg" width="30px"/>
             &nbsp; Linkedin <span>-&gt;</span>
         </h2>
         <p>Linkedin profile.</p>
@@ -25,7 +25,7 @@
     <div
          class="card">
         <h2 class="text-2xl">
-            <img class="themeSvg inline-block" src="discord-mark-black.svg" width="30px"/>
+            <img class="theme-svg inline-block" src="discord-mark-black.svg" width="30px"/>
             &nbsp; Discord
         </h2>
         <p>
@@ -39,7 +39,7 @@
     <div
          class="card">
         <h2 class="text-2xl">
-            <img class="themeSvg inline-block" src="email.svg" width="30px"/>
+            <img class="theme-svg inline-block" src="email.svg" width="30px"/>
             &nbsp; Mail
         </h2>
         <p>

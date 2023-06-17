@@ -16,7 +16,7 @@
             rel="noopener noreferrer"
     >
         <h2 class="text-2xl">
-            <img class="themeSvg inline-block" src="github-mark.svg" width="30px"/>
+            <img class="theme-svg inline-block" src="github-mark.svg" width="30px"/>
             &nbsp; GitHub <span>-&gt;</span>
         </h2>
         <p>
@@ -31,7 +31,7 @@
             rel="noopener noreferrer"
     >
         <h2 class="text-2xl">
-            <img class="themeSvg inline-block" src="icons8-medium-100.png" width="30px"/>
+            <img class="theme-svg inline-block" src="icons8-medium-100.png" width="30px"/>
             &nbsp; Medium <span>-&gt;</span>
         </h2>
         <p>
@@ -39,4 +39,18 @@
         </p>
     </a>
 
+    <a
+            href="https://www.youtube.com/channel/UCQZn53Grr8bYccKzBfplmHQ"
+            class="card"
+            target="_blank"
+            rel="noopener noreferrer"
+    >
+        <h2 class="text-2xl">
+            <img class="theme-svg inline-block" src="youtube-symbol-svgrepo-com.svg" width="30px"/>
+            &nbsp; Youtube <span>-&gt;</span>
+        </h2>
+        <p>
+            Youtube videos.
+        </p>
+    </a>
 </div>
