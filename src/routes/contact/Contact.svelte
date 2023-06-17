@@ -29,7 +29,7 @@
             &nbsp; Discord
         </h2>
         <p>
-            <strong>Mr Obliviate#9114</strong>
+            <strong>mrobliviate</strong>
         </p>
         <p>
             Personal Discord account.
