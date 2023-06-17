@@ -5,6 +5,9 @@
     import Blur from "../components/Blur.svelte";
     import Hero from "./Hero.svelte";
     import Footer from "../components/Footer.svelte";
+    import Skills from "./Skills.svelte";
+    import Projects from "./Projects.svelte";
+    import ToContact from "./ToContact.svelte";
 </script>
 
 <head>
@@ -20,6 +23,14 @@
         <Hero/>
     </div>
 
+    <div style="min-height: 80vh">
+        <Skills/>
+    </div>
+    <div style="min-height: 80vh">
+        <Projects/>
+    </div>
+
     <Experience/>
+    <ToContact/>
     <Footer/>
 </main>
