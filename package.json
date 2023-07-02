@@ -21,6 +21,7 @@
     "postcss-load-config": "^4.0.1",
     "svelte": "^3.54.0",
     "svelte-check": "^3.0.1",
+    "svelte-highlight": "^7.3.0",
     "svelte-preprocess": "^4.10.7",
     "tailwindcss": "^3.1.5",
     "typescript": "^5.0.0",
@@ -31,10 +32,12 @@
     "@popperjs/core": "^2.11.7",
     "body-parser": "^1.20.2",
     "classnames": "^2.3.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "flowbite": "^1.6.5",
     "flowbite-svelte": "^0.34.9",
     "passport-local": "^1.0.0",
-    "pg": "^8.10.0"
+    "pg": "^8.10.0",
+    "svelte-markdown": "^0.2.3"
   }
 }
