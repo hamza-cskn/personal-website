@@ -1,6 +1,6 @@
 <div>
     <img
-            src="https://media.licdn.com/dms/image/C4D03AQEhLEUbkMY61g/profile-displayphoto-shrink_800_800/0/1658303712822?e=1685577600&v=beta&t=ZlxZ-o5lA6CMVeOVjG7SE9_BkElGV-JVu7hEImX7CBA"
+            src="https://media.licdn.com/dms/image/C4D03AQEhLEUbkMY61g/profile-displayphoto-shrink_400_400/0/1658303712822?e=1694044800&v=beta&t=A4ysIy9Gb55yb0Ck9MVvgYPWTZqoiUPImWL3Af6jImM"
             alt="Hamza Photo"
             class="profile-photo"
             width=200
