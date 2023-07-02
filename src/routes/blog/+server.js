@@ -1,4 +1,6 @@
 import pkg from 'pg';
+import 'dotenv/config';
+
 const {Client} = pkg;
 
 let client;
