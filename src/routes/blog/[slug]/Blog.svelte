@@ -1,5 +1,6 @@
 <script>
     import "../../../app.postcss";
+    import SvelteMarkdown from 'svelte-markdown';
 
     /** @type {import('./$types').PageData} */
     export let data;
@@ -13,16 +14,14 @@
 
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 theme-bg-color-1">
     <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
-        <article
-                class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
-
+        <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
             <header class="mb-4 lg:mb-6 not-format">
                 <h1 class="mb-4 text-3xl text-center font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
                     {data.title}</h1>
             </header>
-            <div>{@html data.content}</div>
+
+            <SvelteMarkdown source = {data.content} />
 
         </article>
     </div>
 </main>
-
